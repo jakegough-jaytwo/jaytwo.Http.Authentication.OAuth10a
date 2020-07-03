@@ -3,7 +3,9 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+#if NETFRAMEWORK
 using jaytwo.DateTimeHelper;
+#endif
 using jaytwo.UrlHelper;
 
 namespace jaytwo.Http.Authentication.OAuth10a
@@ -58,7 +60,7 @@ namespace jaytwo.Http.Authentication.OAuth10a
 
             var authorizationHeaderValue = calculator.GetAuthorizationHeaderValue();
 
-            SetAuthenticationHeader(request, authorizationHeaderValue);
+            SetRequestAuthenticationHeader(request, authorizationHeaderValue);
         }
     }
 }

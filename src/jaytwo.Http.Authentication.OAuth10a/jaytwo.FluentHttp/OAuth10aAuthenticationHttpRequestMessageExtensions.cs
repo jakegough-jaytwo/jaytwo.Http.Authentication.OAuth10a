@@ -1,6 +1,6 @@
 using System;
 using System.Net.Http;
-using jaytwo.FluentHttp.Authentication.OAuth10a;
+using jaytwo.Http.Authentication.OAuth10a;
 
 namespace jaytwo.FluentHttp
 {
